@@ -1,0 +1,5 @@
+geometry_msgs/PoseStamped query
+---
+bool success
+scalar_field_interfaces/ScalarMeasurement measurement
+string status_message
