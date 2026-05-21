@@ -1,0 +1,6 @@
+geometry_msgs/PoseStamped[] queries
+---
+bool success
+float64[] mean
+float64[] variance
+string status_message
