@@ -1,5 +1,15 @@
+# Query one scalar field sample at one pose.
+#
+# query.header.frame_id: frame of the query pose
+# query.header.stamp: timestamp associated with the pose used for sampling
+# query.pose: pose at which the field should be sampled
+
 geometry_msgs/PoseStamped query
 ---
+# success: true if the sample was generated successfully
+# measurement: sampled scalar measurement at the queried pose
+# status_message: human-readable error or status string
+
 bool success
 scalar_field_interfaces/ScalarMeasurement measurement
 string status_message

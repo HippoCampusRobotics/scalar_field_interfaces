@@ -1,5 +1,19 @@
+# Query belief mean and variance at one or more poses.
+#
+# All query poses must be expressed in the same frame expected by the belief node.
+# This should be the `map` frame.
+
 geometry_msgs/PoseStamped[] queries
 ---
+# success: true if all queries were processed successfully
+# mean: posterior mean for each query pose
+# variance: posterior variance for each query pose
+# status_message: human-readable error or status string
+#
+# On success:
+#   len(mean) == len(queries)
+#   len(variance) == len(queries)
+
 bool success
 float64[] mean
 float64[] variance

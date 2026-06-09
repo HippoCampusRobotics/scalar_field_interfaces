@@ -3,7 +3,7 @@
 <package format="3">
     <name>scalar_field_interfaces</name>
     <version>1.0.2</version>
-    <description>The scalar_field_interfaces package</description>
+    <description>ROS 2 messages and services for scalar field simulation, measurement, and belief queries.</description>
 
     <maintainer email="nathalie.bauschmann@tuhh.de">Nathalie Bauschmann</maintainer>
 
@@ -11,7 +11,7 @@
 
     <url type="website">hippocampusrobotics.github.io/docs</url>
 
-    <author email="thies.lennart.alff@tuhh.de">Thies Lennart Alff</author>
+    <author email="nathalie.bauschmann@tuhh.de">Nathalie Bauschmann</author>
 
     <buildtool_depend>ament_cmake</buildtool_depend>
     <build_depend>rosidl_default_generators</build_depend>
