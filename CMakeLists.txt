@@ -29,6 +29,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/IrDomeMeasurement.msg"
   "srv/SampleScalarField.srv"
   "srv/QueryScalarFieldBelief.srv"
+  "srv/QueryScalarFieldBeliefCovariance.srv"
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
 )
 

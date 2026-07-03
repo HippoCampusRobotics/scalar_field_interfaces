@@ -1,0 +1,21 @@
+# Query belief mean and full posterior covariance at one or more poses.
+#
+# Like query_scalar_field_belief, but returns the full N x N covariance
+# matrix instead of just the diagonal (variance).
+#
+
+geometry_msgs/PoseStamped[] queries
+---
+# success: true if all queries were processed successfully
+# mean: posterior mean for each query pose
+# covariance_matrix: N x N covariance, row-major flattened, N = len(queries)
+# status_message: human-readable error or status string
+#
+# On success:
+#   len(mean) == len(queries)
+#   len(covariance_matrix) == len(queries) * len(queries)
+
+bool success
+float64[] mean
+float64[] covariance_matrix
+string status_message
