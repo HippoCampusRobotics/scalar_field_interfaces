@@ -9,6 +9,11 @@ geometry_msgs/PoseStamped[] queries
 # success: true if all queries were processed successfully
 # mean: posterior mean for each query pose
 # covariance_matrix: N x N covariance, row-major flattened, N = len(queries)
+# measurement_noise_variance: GP likelihood noise variance (sigma_n^2), in the
+#   same physical units as covariance_matrix. A client simulating a new noisy
+#   measurement at a queried pose (z = f + eps, eps ~ N(0, measurement_noise_variance))
+#   should add this to the relevant diagonal entries before conditioning, e.g.
+#   inverting (covariance_block + measurement_noise_variance * I).
 # status_message: human-readable error or status string
 #
 # On success:
@@ -18,4 +23,5 @@ geometry_msgs/PoseStamped[] queries
 bool success
 float64[] mean
 float64[] covariance_matrix
+float64 measurement_noise_variance
 string status_message
